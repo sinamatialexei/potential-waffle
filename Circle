@@ -1,0 +1,105 @@
+package circleAF;
+import java.lang.*;
+import java.util.*;
+
+
+public class Circle {
+    private int radius;
+    private int x;
+    private int y;
+    private String color;
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public String getColor() {
+        return color;
+    }
+    public Circle(){
+        x=0;
+        y=0;
+        radius=1;
+        color="";
+    }
+    public Circle(int r, int xx, int yy, String c){
+        radius=r; // this.radius=r
+        x=xx;
+        y=yy;
+        color=c;
+    }
+
+    @Override
+    public String toString() {
+        return "("+x+","+y+")"+" r="+radius+" colour="+color;
+    }
+    public double getArea(){
+        return radius*radius*Math.PI;
+    }
+    public double getPerimeter() {
+        return 2*radius*Math.PI;
+
+    }
+}
+
+package circleAF;
+import java.util.Random;
+import java.util.Scanner;
+
+public class TestCircle {
+    public static void main(String[] args) {
+        Circle c1,c2;
+        c1=new Circle();
+        c2=new Circle(3,5,8,"red");
+        c2.setColor("blue");
+        c2.setX(9);
+        c2.setY(10);
+
+        System.out.println(c2.toString());
+        System.out.println("S= " + c2.getArea());
+        System.out.println("P= "+ c2.getPerimeter());
+        double i =Math.random();
+        System.out.println(i);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("->");
+//int j =scan.nextInt();
+
+//System.out.println("вы ввели " + j);
+
+        Random gen=new Random();
+        int j=gen.nextInt(10);
+        System.out.println(j);
+
+        int []mas=new int[5];
+
+        for(int l=0; l<mas.length; l++)
+            mas[l]=gen.nextInt(10);
+        for(int l=0; l<mas.length; l++)
+            System.out.print("\t"+mas[l]);
+
+    }
+}
