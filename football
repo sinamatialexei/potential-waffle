@@ -1,0 +1,59 @@
+package sndwch;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Match extends JFrame
+{
+    JButton b1,b2;
+    JLabel l1,l2;
+    JLabel l3;
+    int madrid=0, milan=0;
+    public Match(String str)
+    {
+        super(str);
+        l1 = new JLabel("Result: 0 X 0");
+        l2 = new JLabel("Last Scorer: N/A ");
+        l3 = new JLabel("Winner: Draw");
+        b1 = new JButton("AC Milan");
+        b1.addActionListener (new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                milan++;
+                l1.setText("Result: "+milan+ " X "+madrid);
+                l2.setText("Last Scorer: AC Milan");
+                if (madrid>milan){ l3.setText("Winner: CF Real Madrid");}
+                if (madrid<milan){ l3.setText("Winner: AC Milan");}
+                if (madrid==milan){ l3.setText("Winner: Draw");}
+            }
+        });
+        b2 = new JButton("Real Madrid");
+        b2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                madrid++;
+                l1.setText("Result: "+milan+ " X "+madrid);
+                l2.setText("Last Scorer: CF Real Madrid");
+                if (madrid>milan){ l3.setText("Winner: CF Real Madrid");}
+                if (madrid<milan){ l3.setText("Winner: AC Milan");}
+                if (madrid==milan){ l3.setText("Winner: Draw");}
+            }
+        });
+        getContentPane().add(b1);
+        getContentPane().add(b2);
+        getContentPane().add(l1);
+        getContentPane().add(l2);
+        getContentPane().add(l3);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setVisible(true);
+        setSize(400,200);
+        setLayout(new FlowLayout());
+    }
+    public static void main(String [] arg){
+        new Match("Match");
+    }
+}
