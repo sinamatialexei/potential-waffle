@@ -1,0 +1,183 @@
+package sndwch;
+import java.lang.*;
+
+abstract public class Shape {
+protected String color;
+protected boolean filled;
+public Shape(){}
+public Shape (String color, boolean filled)
+{
+this.color = color;
+this.filled = filled;
+}
+
+public String getColor() {
+return color;
+}
+
+public void setColor(String color) {
+this.color = color;
+}
+public boolean isFilled() {
+return filled;
+}
+
+public void setFilled(boolean filled) {
+this.filled = filled;
+}
+
+public abstract double getArea();
+public abstract double getPerimeter();
+
+public String toString() {
+return "color=" + color + "filled=" + filled;
+}
+}
+
+package sndwch;
+import java.lang.*;
+import java.math.*;
+
+public class Circle {
+protected double radius;
+protected String color;
+protected boolean filled;
+
+public Circle(){}
+public Circle(double radius)
+{
+this.radius=radius;
+}
+public Circle(double radius, String color, boolean filled){
+this.radius = radius;
+this.color = color;
+this.filled = filled;
+}
+
+public double getRadius(){
+return radius;
+}
+
+public void setRadius(double radius) {
+this.radius = radius;
+}
+public double getArea(){
+return Math.PI*radius*radius;
+}
+public double getPerimeter(){
+return 2*Math.PI*radius;
+}
+public String toString(){
+return "color=" + color + "filled=" + filled;
+}
+}
+
+
+package sndwch;
+import java.lang.*;
+import java.math.*;
+
+public class Rectangle {
+protected double width;
+protected double length;
+protected String color;
+protected boolean filled;
+public Rectangle(){}
+public Rectangle(double width, double length){
+this.width = width;
+this.length = length;
+}
+public Rectangle (double width, double length, String color, boolean filled){
+this.width = width;
+this.length = length;
+this.color = color;
+this.filled = filled;
+}
+
+public double getWidth() {
+return width;
+}
+
+public void setWidth(double width) {
+this.width = width;
+}
+public double getLength(){
+return length;
+}
+
+public void setLength(double length) {
+this.length = length;
+}
+public double getArea(){
+return width*length;
+}
+public double getPerimeter(){
+return 2*(length+width);
+}
+public String toString(){
+return "color=" + color + "filled=" + filled;
+}
+}
+
+package sndwch;
+import java.lang.*;
+import java.math.*;
+
+public class Square {
+protected double side;
+protected String color;
+protected boolean filled;
+
+public Square() {
+}
+
+public Square(double side) {
+this.side = side;
+}
+
+public Square(double side, String color, boolean filled) {
+this.side = side;
+this.color = color;
+this.filled = filled;
+}
+
+public double getSide() {
+return side;
+}
+
+public void setSide(double side) {
+this.side = side;
+}
+
+public double getArea(){
+return side*side;
+}
+public double getPerimeter(){
+return 4*side;
+}
+
+public String toString() {
+return "color=" + color + "filled=" + filled;
+}
+}
+package sndwch;
+
+public class Tester {
+public static void main(String[] args) {
+Circle s1 = new Circle(5.5, "RED", false);
+System.out.println(s1);
+System.out.println(s1.getArea());
+System.out.println(s1.getPerimeter());
+System.out.println(s1.getRadius());
+
+Rectangle s2 = new Rectangle (4, 5, "Pink", false);
+System.out.println(s2);
+System.out.println(s2.getArea());
+System.out.println(s2.getPerimeter());
+
+Square s3 = new Square (6, "Grey", false);
+System.out.println(s3);
+System.out.println(s3.getArea());
+System.out.println(s3.getPerimeter());
+}
+}
