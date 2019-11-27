@@ -1,0 +1,231 @@
+package sndwch;
+
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+public class library   {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame ("Library");
+        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+
+        ImageIcon icon1 = new ImageIcon ("C:\\Users\\1\\IdeaProjects\\library\\b1.jpg");
+        ImageIcon icon2 = new ImageIcon ("C:\\Users\\1\\IdeaProjects\\library\\b2.jpg");
+        ImageIcon icon3 = new ImageIcon ("C:\\Users\\1\\IdeaProjects\\library\\b3.jpg");
+        ImageIcon icon4 = new ImageIcon ("C:\\Users\\1\\IdeaProjects\\library\\b4.jpg");
+        ImageIcon icon5 = new ImageIcon ("C:\\Users\\1\\IdeaProjects\\library\\b5.jpg");
+        ImageIcon icon6 = new ImageIcon ("C:\\Users\\1\\IdeaProjects\\library\\b6.jpg");
+        ImageIcon icon7 = new ImageIcon ("C:\\Users\\1\\IdeaProjects\\library\\b7.jpg");
+        ImageIcon icon8 = new ImageIcon ("C:\\Users\\1\\IdeaProjects\\library\\b8.jpg");
+        ImageIcon icon9 = new ImageIcon ("C:\\Users\\1\\IdeaProjects\\library\\b9.jpg");
+
+
+        JPanel subPanel1 = new JPanel();
+        subPanel1.setPreferredSize (new Dimension(300, 800));
+        subPanel1.setBackground (Color.white);
+        JLabel label1 = new JLabel ("Гарри Поттер и Философский камень", icon1, SwingConstants.CENTER);
+        label1.setHorizontalTextPosition (SwingConstants.CENTER);
+        label1.setVerticalTextPosition (SwingConstants.BOTTOM);
+        JLabel label2 = new JLabel ("Автор: Джоан Роулинг", SwingConstants.CENTER);
+        JLabel label3 = new JLabel ("Жанр: роман", SwingConstants.CENTER);
+
+
+        JLabel label4 = new JLabel ("Алиса в стране чудес", icon2, SwingConstants.CENTER);
+        label4.setHorizontalTextPosition (SwingConstants.CENTER);
+        label4.setVerticalTextPosition (SwingConstants.BOTTOM);
+        JLabel label5 = new JLabel ("Автор: Льюис Кэролл", SwingConstants.CENTER);
+        JLabel label6 = new JLabel ("Жанр: сказка", SwingConstants.CENTER);
+
+        JLabel label7 = new JLabel ("Уличный кот по имени Боб", icon3, SwingConstants.CENTER);
+        label7.setHorizontalTextPosition (SwingConstants.CENTER);
+        label7.setVerticalTextPosition (SwingConstants.BOTTOM);
+        JLabel label8 = new JLabel ("Автор: Джеймс Боуэн", SwingConstants.CENTER);
+        JLabel label9 = new JLabel ("Жанр: роман, рассказ", SwingConstants.CENTER);
+
+        JButton button1 = new JButton("Читать");
+        button1.setActionCommand("Button 1 was pressed!");
+        button1.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                String message = "Здесь была бы книга, если бы на нее не распространялись авторские права :(";
+                JOptionPane.showMessageDialog(null, message, "Гарри Поттер и философский камень", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+
+        JButton button2 = new JButton("Читать");
+        button2.setActionCommand("Button 2 was pressed!");
+        button2.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                String message2 = "Здесь была бы книга, если бы на нее не распространялись авторские права :(";
+                JOptionPane.showMessageDialog(null, message2, "Алиса в стране чудес", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+
+        JButton button3 = new JButton("Читать");
+        button3.setActionCommand("Button 3 was pressed!");
+        button3.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                String message3 = "Здесь была бы книга, если бы на нее не распространялись авторские права :(";
+                JOptionPane.showMessageDialog(null, message3, "Уличный кот по имени Боб", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+
+        subPanel1.add (label1);
+        subPanel1.add (label2);
+        subPanel1.add (label3);
+        subPanel1.add(button1);
+        subPanel1.add (label4);
+        subPanel1.add (label5);
+        subPanel1.add (label6);
+        subPanel1.add(button2);
+        subPanel1.add (label7);
+        subPanel1.add (label8);
+        subPanel1.add (label9);
+        subPanel1.add(button3);
+
+        JPanel subPanel11 = new JPanel();
+        subPanel11.setPreferredSize (new Dimension(300, 800));
+        subPanel11.setBackground (Color.white);
+        JLabel label11 = new JLabel ("Властелин колец", icon4, SwingConstants.CENTER);
+        label11.setHorizontalTextPosition (SwingConstants.CENTER);
+        label11.setVerticalTextPosition (SwingConstants.BOTTOM);
+        JLabel label12 = new JLabel ("Автор: Дж. Р.Р. Толкин", SwingConstants.CENTER);
+        JLabel label13 = new JLabel ("Жанр: роман", SwingConstants.CENTER);
+
+        JLabel label14 = new JLabel ("451 градус по Фаренгейту. Рассказы", icon5, SwingConstants.CENTER);
+        label14.setHorizontalTextPosition (SwingConstants.CENTER);
+        label14.setVerticalTextPosition (SwingConstants.BOTTOM);
+        JLabel label15 = new JLabel ("Автор: Рэй Брэдбери", SwingConstants.CENTER);
+        JLabel label16 = new JLabel ("Жанр: роман", SwingConstants.CENTER);
+
+        JLabel label17 = new JLabel ("1984", icon6, SwingConstants.CENTER);
+        label17.setHorizontalTextPosition (SwingConstants.CENTER);
+        label17.setVerticalTextPosition (SwingConstants.BOTTOM);
+        JLabel label18 = new JLabel ("Автор: Джордж Оруэлл", SwingConstants.CENTER);
+        JLabel label19 = new JLabel ("Жанр: антиутопия", SwingConstants.CENTER);
+
+        JButton button4 = new JButton("Читать");
+        button4.setActionCommand("Button 4 was pressed!");
+        button4.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                String message4 = "Здесь была бы книга, если бы на нее не распространялись авторские права :(";
+                JOptionPane.showMessageDialog(null, message4, "Властелин колец", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+
+        JButton button5 = new JButton("Читать");
+        button5.setActionCommand("Button 5 was pressed!");
+        button5.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                String message5 = "Здесь была бы книга, если бы на нее не распространялись авторские права :(";
+                JOptionPane.showMessageDialog(null, message5, "451 градус по Фаренгейту", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+
+        JButton button6 = new JButton("Читать");
+        button6.setActionCommand("Button 6 was pressed!");
+        button6.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                String message6 = "Здесь была бы книга, если бы на нее не распространялись авторские права :(";
+                JOptionPane.showMessageDialog(null, message6, "1984", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+
+        subPanel11.add (label11);
+        subPanel11.add (label12);
+        subPanel11.add (label13);
+        subPanel11.add(button4);
+        subPanel11.add (label14);
+        subPanel11.add (label15);
+        subPanel11.add (label16);
+        subPanel11.add(button5);
+        subPanel11.add (label17);
+        subPanel11.add (label18);
+        subPanel11.add (label19);
+        subPanel11.add(button6);
+
+        JPanel subPanel21 = new JPanel();
+        subPanel21.setPreferredSize (new Dimension(300, 800));
+        subPanel21.setBackground (Color.white);
+        JLabel label21 = new JLabel ("Городость и предубеждение", icon7, SwingConstants.CENTER);
+        label21.setHorizontalTextPosition (SwingConstants.CENTER);
+        label21.setVerticalTextPosition (SwingConstants.BOTTOM);
+        JLabel label22 = new JLabel ("Автор: Джейн Остен", SwingConstants.CENTER);
+        JLabel label23 = new JLabel ("Жанр: роман", SwingConstants.CENTER);
+
+        JLabel label24 = new JLabel ("Марсианские хроники", icon8, SwingConstants.CENTER);
+        label24.setHorizontalTextPosition (SwingConstants.CENTER);
+        label24.setVerticalTextPosition (SwingConstants.BOTTOM);
+        JLabel label25 = new JLabel ("Автор: Рэй Брэдбери", SwingConstants.CENTER);
+        JLabel label26 = new JLabel ("Жанр: роман", SwingConstants.CENTER);
+
+        JLabel label27 = new JLabel ("Хроники Амбера", icon9, SwingConstants.CENTER);
+        label27.setHorizontalTextPosition (SwingConstants.CENTER);
+        label27.setVerticalTextPosition (SwingConstants.BOTTOM);
+        JLabel label28 = new JLabel ("Автор: Рождер Желязны", SwingConstants.CENTER);
+        JLabel label29 = new JLabel ("Жанр: роман", SwingConstants.CENTER);
+
+        JButton button7 = new JButton("Читать");
+        button7.setActionCommand("Button 7 was pressed!");
+        button7.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                String message7 = "Здесь была бы книга, если бы на нее не распространялись авторские права :(";
+                JOptionPane.showMessageDialog(null, message7, "Гордость и предубеждение", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+
+        JButton button8 = new JButton("Читать");
+        button8.setActionCommand("Button 8 was pressed!");
+        button8.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                String message8 = "Здесь была бы книга, если бы на нее не распространялись авторские права :(";
+                JOptionPane.showMessageDialog(null, message8, "Марсианские хроники", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+
+        JButton button9 = new JButton("Читать");
+        button9.setActionCommand("Button 9 was pressed!");
+        button9.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                String message9 = "Здесь была бы книга, если бы на нее не распространялись авторские права :(";
+                JOptionPane.showMessageDialog(null, message9, "Хроники Амбера", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+
+        subPanel21.add (label21);
+        subPanel21.add (label22);
+        subPanel21.add (label23);
+        subPanel21.add(button7);
+        subPanel21.add (label24);
+        subPanel21.add (label25);
+        subPanel21.add (label26);
+        subPanel21.add(button8);
+        subPanel21.add (label27);
+        subPanel21.add (label28);
+        subPanel21.add (label29);
+        subPanel21.add(button9);
+
+
+        // Set up primary panel
+        JPanel primary = new JPanel();
+        primary.setBackground (Color.PINK);
+        primary.add (subPanel1);
+        primary.add (subPanel11);
+        primary.add (subPanel21);
+
+        frame.getContentPane().add(primary);
+        frame.pack();
+        frame.setVisible(true);
+
+    }
+}
